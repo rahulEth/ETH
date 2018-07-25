@@ -1,0 +1,97 @@
+<html>
+
+<head>
+    <title> Eth Transaction</title>
+    <link href="//cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css"></link>
+</head>
+
+<body>
+    <h2>  Sending Ether </h2>
+    <div>
+        address:
+        <input type="text" id="publickey"> value:
+        <input type="text" id="value">
+        <input type="button" value="Send" onclick="sendETH()">
+    </div>
+    <br>
+    <br>
+    <h2>  Sending Token </h2>
+    <div>
+        address:
+        <input type="text" id="pubkey"> value:
+        <input type="text" id="val">
+        <input type="button" value="Send" onclick="sendToken()">
+    </div>
+    <br>
+    <br>
+    <h2>ETH balance </h2>
+    <div>
+        ETH:
+        <input id="eth"> </input>
+        <input type="button" value="getBalance" onclick="getBalance()"> </input>
+        <div id="balance"> </div>
+    </div>
+    <br>
+    <br>
+    <h2>Get Transaction Details by transaction hash</h2>
+    <div>
+        TxId:
+        <input id="TransactionId"> </input>
+        <input type="button" value="getTransaction" onclick="getTransaction()"> </input>
+    </div>
+    <br>
+    <br>
+
+    <div id="ledger"><b>Block:</b></div>
+    <div><b>Source:</b>
+        <div id="from"> </div>
+    </div>
+    <div><b>Destination:</b>
+        <div id="to"> </div>
+    </div>
+
+    <div><b>TimeStamp:</b>
+        <div id="timestamp"> </div>
+    </div>
+    <br>
+    <br>
+
+    <!-- <h2> Ethereum Transaction History </h2>
+    <table id="transfdata">
+        <thead>
+            <tr>
+                <td> Sno. </td>
+                <td> txID </td>
+                <td> Blocknumber </td>
+                <td> Amount</td>
+                <td> from </td>
+                <td> to</td>
+                <td> TimeStamp </td>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+        </tbody>
+    </table> -->
+</body>
+<!-- <script src = "javascripts/js/jquery.dataTables.min.js"> </script> -->
+<script src="./javascripts/custom/sendEthereum.js">
+</script>
+<script src="./javascripts/custom/sendToken.js">
+</script>
+<script src="./javascripts/custom/getBalance.js">
+</script>
+<script src="./javascripts/custom/getTransaction.js">
+</script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js">
+</script>
+<!-- <script type="text/javascript">
+    $(function() {
+
+        txTable()
+    })
+</script> -->
+
+</html>
